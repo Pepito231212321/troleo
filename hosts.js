@@ -79,7 +79,7 @@ const roomNames = [
  KICK: JoacoXLS ON 🟢,
  KICK: JoacoXLS ON 🟢,
  KICK: JoacoXLS ON 🟢,
- KICK: JoacoXLS ON 🟢,
+ KICK: JoacoXLS ON 🟢
 ];
 
 const maxPlayersList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
