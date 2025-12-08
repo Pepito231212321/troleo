@@ -69,17 +69,17 @@ async function sendDiscordRoomLink(webhookUrl, roomLink, roomName) {
 /* ---------- Config (modificable / rotativo por INDEX) ---------- */
 
 const roomNames = [
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢",
-    "KICK: JoacoXLS ON 🟢"
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢"
 ];
 
 const maxPlayersList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
