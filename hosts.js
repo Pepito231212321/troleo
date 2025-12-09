@@ -69,11 +69,11 @@ async function sendDiscordRoomLink(webhookUrl, roomLink, roomName) {
 /* ---------- Config (modificable / rotativo por INDEX) ---------- */
 
 const roomNames = [
-    "💚 KICK: https://kick.com/becken82 ON 💚",
-    "💚 KICK: https://kick.com/becken82 ON 💚",
-    "💚 KICK: https://kick.com/becken82 ON 💚",
-    "💚 KICK: https://kick.com/becken82 ON 💚",
-    "💚 KICK: https://kick.com/becken82 ON 💚"
+    "💚 KICK: KICK.COM/BECKEN82 ON 💚",
+    "💚 KICK: KICK.COM/BECKEN82 ON 💚",
+    "💚 KICK: KICK.COM/BECKEN82 ON 💚",
+    "💚 KICK: KICK.COM/BECKEN82 ON 💚",
+    "💚 KICK: KICK.COM/BECKEN82 ON 💚",
 ];
 
 const maxPlayersList = [1, 1, 1, 1, 1];
