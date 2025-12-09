@@ -17,27 +17,27 @@ jobs:
       max-parallel: 11
       matrix:
         include:
-          - recaptcha_token: "thr1.AAAAAGk2WOozdn1puTuvpQ.xEY_UZKwhI0"
+          - recaptcha_token: "thr1.AAAAAGk4eSsZ4gKc5myLsg.qZU7n-LXn-g"
             index: 0
-          - recaptcha_token: "thr1.AAAAAGk2WRYFP7tWl_XCkA.1OY8dDfrN10"
+          - recaptcha_token: "thr1.AAAAAGk4eTX_krKuuvo8sA.d0kW9Ihj5S0"
             index: 1
-          - recaptcha_token: "thr1.AAAAAGk2WR6jjHHEdQ-sJg.uh7WY8R7gCQ"
+          - recaptcha_token: "thr1.AAAAAGk4eTswr4UPXRHGOw.ZfW32gbX7Cg"
             index: 2
-          - recaptcha_token: "thr1.AAAAAGk2WSv0ZJjdFqO5Tg.b1eCgEDr3dQ"
+          - recaptcha_token: "thr1.AAAAAGk4eUG5lkQjNv5dMA.V-OCRSStIjA"
             index: 3
-          - recaptcha_token: "thr1.AAAAAGk2WT665JsbJ0o49w.lONP8IQqEZ0"
+          - recaptcha_token: "thr1.AAAAAGk4eUzJWtkX_wvFIg.UId9-V_FD5w"
             index: 4
-          - recaptcha_token: "thr1.AAAAAGk2WWMiHKmMdEHXAg.iOSfu-s1dSY"
+          - recaptcha_token: "thr1.AAAAAGk4eVRc0PZW4B2efA._yDTt1lhcYk"
             index: 5
-          - recaptcha_token: "thr1.AAAAAGk2WZKU_vsXGOwwiQ.sgMihptXIUc"
+          - recaptcha_token: "thr1.AAAAAGk4eVyJlvwvmJyzGQ.FvWQJPPA5dY"
             index: 6
-          - recaptcha_token: "thr1.AAAAAGk2WZrGIr549rE9QQ.XenLe45Wc3s"
+          - recaptcha_token: "thr1.AAAAAGk4eWSR0ZDR2-oDBg.b40IxQI6EnE"
             index: 7
-          - recaptcha_token: "thr1.AAAAAGk2WmJDS20gHP-hng.5KBd3-gAau4"
+          - recaptcha_token: "thr1.AAAAAGk4eW3t6-y28U1Jxg.XFAVxXCd4j4"
             index: 8
-          - recaptcha_token: "thr1.AAAAAGk2WmoqgbfYJN514Q.sIm_fVOfJDo"
+          - recaptcha_token: "thr1.AAAAAGk4eXSnBZ1RltxeYQ.OIk8LnlRrQc"
             index: 9
-          - recaptcha_token: "thr1.AAAAAGk2Wnt_6Fo15iuiQA.nNtjNTagfC4"
+          - recaptcha_token: "thr1.AAAAAGk4eX0omjkkTg78Wg.n4FahCq9Pcw"
             index: 10
 
     steps:
@@ -63,4 +63,3 @@ jobs:
           ROOM_PASSWORD: ""
           PLAYER_NAME: "Teleese"
           PLAYER_AVATAR: "👽"
-
