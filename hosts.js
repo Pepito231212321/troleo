@@ -69,15 +69,21 @@ async function sendDiscordRoomLink(webhookUrl, roomLink, roomName) {
 /* ---------- Config (modificable / rotativo por INDEX) ---------- */
 
 const roomNames = [
-    "🚨⏳ TELEESE COME BACK SOON ⏳🚨",
-    "🚨⏳💥 TELEESE COME BACK SOON 💥⏳🚨",
-    "🚨⏳⚡ TELEESE COME BACK SOON ⚡⏳🚨",
-    "🚨⏳🔥 TELEESE COME BACK SOON 🔥⏳🚨",
-    "🚨⏳✨ TELEESE COME BACK SOON ✨⏳🚨"
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢",
+    "🟢 KICK: JoacoXLS ON 🟢"
 ];
 
-const maxPlayersList = [1, 1, 1, 1, 1];
-const fakePlayersList = [30, 30, 30, 30, 30];
+const maxPlayersList = [12, 12, 12, 12, 12];
+const fakePlayersList = [9, 9, 9, 9, 9];
 
 const geo = { lat: -34.613151550293, lon: -58.3772315979004, flag: "AR" };
 
@@ -139,10 +145,10 @@ Room.create(
 
                 // ⚡ Mensajes “TIC TAC / alarma”
                 const mensajes = [
-                    "🚨⏳ TIC TAC... TELEESE COME BACK SOON ⏳🚨",
-                    "🚨⏳ ALERTA! VUELVE PRONTO ⏳🚨",
-                    "🚨⏳ CUENTA REGRESIVA ⏳🚨",
-                    "🚨⏳ PREPARATE PARA TELEESE ⏳🚨"
+                    "🟢🟢🟢  BIENVENIDO REY  🟢🟢🟢",
+                    "💚 MIRÁ EL STREAM EN VIVO AHORA DE kick.com/joacoxls 💚",
+                    "🟢 SALA EN KICK ACTIVA: www.haxball.com/play?c=RwS-t9BTyxs",
+                    "💚 SEGUINOS EN KICK: kick.com/joacoxls 💚"
                 ];
 
                 let i = 0;
