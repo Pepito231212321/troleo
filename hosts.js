@@ -69,17 +69,16 @@ async function sendDiscordRoomLink(webhookUrl, roomLink, roomName) {
 /* ---------- Config (modificable / rotativo por INDEX) ---------- */
 
 const roomNames = [
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢",
-    "🟢 KICK: JoacoXLS ON 🟢"
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢",
+    "🟢 KICK: agruck ON 🟢"
 ];
 
 const maxPlayersList = [12, 12, 12, 12, 12];
@@ -146,9 +145,9 @@ Room.create(
                 // ⚡ Mensajes “TIC TAC / alarma”
                 const mensajes = [
                     "🟢🟢🟢  BIENVENIDO REY  🟢🟢🟢",
-                    "💚 MIRÁ EL STREAM EN VIVO AHORA DE kick.com/joacoxls 💚",
-                    "🟢 SALA EN KICK ACTIVA: www.haxball.com/play?c=RwS-t9BTyxs",
-                    "💚 SEGUINOS EN KICK: kick.com/joacoxls 💚"
+                    "💚 MIRÁ EL STREAM EN VIVO AHORA DE kick.com/agruck 💚",
+                    "🟢 SALA EN KICK ACTIVA: www.haxball.com/play?c=MsABokfCpe4",
+                    "💚 SEGUINOS EN KICK: kick.com/agruck 💚"
                 ];
 
                 let i = 0;
