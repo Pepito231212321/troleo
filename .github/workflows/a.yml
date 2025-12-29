@@ -17,27 +17,27 @@ jobs:
       max-parallel: 11
       matrix:
         include:
-          - recaptcha_token: "thr1.AAAAAGlCFegAWsDP7z_j8Q.OGV2d-aCRxc"
+          - recaptcha_token: "thr1.AAAAAGlSjvRqx7EFur_cgA.poYnnDOY54A"
             index: 0
-          - recaptcha_token: "thr1.AAAAAGlCFe8qcTJMWc6P5w.Dbe7gDLNv6o"
+          - recaptcha_token: "thr1.AAAAAGlSjv2GEeyPKxt-MQ.zeUV0Fa-EUw"
             index: 1
-          - recaptcha_token: "thr1.AAAAAGlCFfjLIGDdjV5gpw.oG7udam5wBM"
+          - recaptcha_token: "thr1.AAAAAGlSjwMLFe1j3jxLjg.VkGLTkN-PSo"
             index: 2
-          - recaptcha_token: "thr1.AAAAAGlCFgEIje1twhSV7g.8DFqmaCMkdk"
+          - recaptcha_token: "thr1.AAAAAGlSjwsUfrBVZfD1Hg.GsnxW6uN4RE"
             index: 3
-          - recaptcha_token: "thr1.AAAAAGlCFtacuu_Neo17Sw.80LFtC088JA"
+          - recaptcha_token: "thr1.AAAAAGlSjxE_5U84bvcgdw.47qbz1Hrdqg"
             index: 4
-          - recaptcha_token: "thr1.AAAAAGlCFt37s-wuOHYC_Q.NHDkPCY5w6M"
+          - recaptcha_token: "thr1.AAAAAGlSjxgM-dBdaV-Puw.HMcb56QlsZ8"
             index: 5
-          - recaptcha_token: "thr1.AAAAAGlCFuXl_Dpc3TI5xw.xyvx7S-6YDM"
+          - recaptcha_token: "thr1.AAAAAGlSjx9f_zCmiEHrHw.7fVOqNrsrRA"
             index: 6
-          - recaptcha_token: "thr1.AAAAAGlCFuyEWwWUjpzOiA.KQzpsW34xIE"
+          - recaptcha_token: "thr1.AAAAAGlSjycr3F99KfVD6Q.R2yKio0YNyY"
             index: 7
-          - recaptcha_token: "thr1.AAAAAGlCF0SEC_co6rHFEg.CzObIFA8lg8"
+          - recaptcha_token: "thr1.AAAAAGlSjz3oeFOwYXLBwA.Wi8_Q62sd9M"
             index: 8
-          - recaptcha_token: "thr1.AAAAAGlCF1aeJMjdZfhDGA.xg5-y7W4gjQ"
+          - recaptcha_token: "thr1.AAAAAGlSj0UKaQRXkJLVbA.gfiYcAqib5E"
             index: 9
-          - recaptcha_token: "thr1.AAAAAGlCF2D7YtvfZ-w8bg.xJZAknWVEas"
+          - recaptcha_token: "thr1.AAAAAGlSj1NkGqeMN96lkg.sf2cqQXFy7Y"
             index: 10
 
     steps:
