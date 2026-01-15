@@ -86,15 +86,7 @@ async function main() {
         await sendMessageToChat(frame, process.env.LLAMAR_ADMIN);
 
         // Mensaje repetido cada 5 segundos
-        const chatInterval = setInterval(async () => {
-            try {
-                await sendMessageToChat(frame, process.env.MENSAJE);
-            } catch (error) {
-                console.error("Error al enviar mensaje al chat:", error);
-                clearInterval(chatInterval);
-                throw new Error('Perdida de conexión con el chat');
-            }
-        }, 5000);
+      
 
         // Anti-AFK
         let moves = ['w', 'a', 's', 'd'];
